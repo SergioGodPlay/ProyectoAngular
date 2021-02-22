@@ -1,7 +1,17 @@
-<p>Nombre del empleado : {{nombre}} </p>
+<p>Nombre del empleado: {{nombre}} </p>
 
-<p>Apellido del empleado : {{apellido}} </p>
+<p>Apellido del empleado: {{apellido}} </p>
 
-<p>Edad del empleado : {{edad < 18 ? "Menor de edad": "Mayor de edad"}} </p>
+<p>Edad del empleado: {{edad < 18 ? "Menor de edad": "Mayor de edad"}} </p>
 
-<p>Empresa del empleado : {{empresa}} </p>
+<p>Empresa del empleado: {{empresa.value}} </p>
+
+<!-- Utilizamos el signo # para declarar una variable de plantilla (#empresa) -->
+Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitarCuadro">
+
+<br><br>
+
+<input type="button" value="Enviar" (click)="getRegistroUsuario()"/> &nbsp;
+
+Registrado: <input type="checkbox" id="registro" [checked]="usuarioRegistrado">
+

@@ -15,7 +15,16 @@ export class EmpleadoComponent implements OnInit {
 
   edad = 27;
 
-  empresa = "Sony Interactive Entertainment";
+  habilitarCuadro = false;
+
+  usuarioRegistrado = false;
+
+  getRegistroUsuario(){
+
+    this.usuarioRegistrado = true;
+  }
+
+  //empresa = "Sony Interactive Entertainment";
 
   /*getEdad(){
 
